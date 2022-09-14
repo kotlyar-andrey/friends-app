@@ -12,57 +12,62 @@
     <main>
       <div class="container">
         <aside class="menu">
-          <form class="form" method="get">
-            <label for="search_input" class="form__title">Поиск:</label>
-            <input type="text" id="search_input" placeholder="Введите имя" />
+          <form class="form" id="form" onsubmit="return false;">
+            <label for="search_by_name" class="form__title">Поиск:</label>
+            <input
+              type="text"
+              id="search_by_name"
+              name="search"
+              placeholder="Имя, возраст, город или страна"
+            />
             <h4 class="form__title">Сортировать по имени:</h4>
-            <label for="nameAscending">&#8595;</label>
+            <label for="name_ascending">&#8595;</label>
             <input
               type="radio"
-              id="nameAscending"
-              name="sortedBy"
+              id="name_ascending"
+              name="sort"
               value="nameAscending"
             />
-            <label for="nameDescending">&#8593;</label>
+            <label for="name_descending">&#8593;</label>
             <input
               type="radio"
-              id="nameDescending"
-              name="sortedBy"
+              id="name_descending"
+              name="sort"
               value="nameDescending"
             />
 
             <h4 class="form__title">Сортировать по возрасту:</h4>
-            <label for="ageAscending">&#8595;</label>
+            <label for="age_ascending">&#8595;</label>
             <input
               type="radio"
-              id="ageAscending"
-              name="sortedBy"
+              id="age_ascending"
+              name="sort"
               value="ageAscending"
             />
 
-            <label for="ageDescending">&#8593;</label>
+            <label for="age_descending">&#8593;</label>
             <input
               type="radio"
-              id="ageDescending"
-              name="sortedBy"
+              id="age_descending"
+              name="sort"
               value="ageDescending"
             />
 
             <h4 class="form__title">Пол:</h4>
-            <label for="genderAll">Все</label>
+            <label for="gender_all">Все</label>
             <input
               type="radio"
-              id="genderAll"
+              id="gender_all"
               name="gender"
               value="all"
               checked
             />
-            <label for="genderMale">Мужчины</label>
-            <input type="radio" id="genderMale" name="gender" value="male" />
-            <label for="genderFemale">Женщины</label>
+            <label for="gender_male">Мужчины</label>
+            <input type="radio" id="gender_male" name="gender" value="male" />
+            <label for="gender_female">Женщины</label>
             <input
               type="radio"
-              id="genderFemale"
+              id="gender_female"
               name="gender"
               value="female"
             />
