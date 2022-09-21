@@ -15,6 +15,26 @@ main {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.message {
+  font-size: 36px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  color: #772299;
+  border: 1px solid #772299;
+}
+
+.loading {
+  color: #772299;
+  border: 1px solid #772299;
+}
+
+.error {
+  color: #ff7777;
+  border: 1px solid #ff7777;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -26,6 +46,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
+  margin: 10px;
   width: 80%;
 }
 

@@ -9,11 +9,12 @@ async function loadUsers(amount = 20) {
 }
 
 function showLoading() {
-  target.innerHTML = "<div class='loading'>Loading...</div>";
+  target.innerHTML = "<div class='message loading'>Загрузка...</div>";
 }
 
 function showError() {
-  target.innerHTML = "<div class='error'>Error</div>";
+  target.innerHTML =
+    "<div class='message error'>Ошибка. Попробуйте обновить страницу</div>";
 }
 
 function showNothing() {
@@ -36,7 +37,7 @@ function showUser(user) {
           src="${user.picture.large}"
           width="128"
           height="128"
-          alt="${user.name.first}  ${user.name.last}"
+          alt="${user.name.first} ${user.name.last}"
         />
         <div class="card__info">
           ${user.gender}, ${user.dob.age} <br />
