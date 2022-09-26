@@ -18,12 +18,17 @@ function showError() {
 }
 
 function showNothing() {
-  target.innerHTML = "<div>Nothing to show</div>";
+  target.innerHTML =
+    "<div class='message error'>Нет данных для отображения.<br>Измените критерии фильтрации</div>";
 }
 
 function showUsers(users) {
-  target.innerHTML = "";
-  users.map(showUser);
+  if (users.length > 0) {
+    target.innerHTML = "";
+    users.map(showUser);
+  } else {
+    showNothing();
+  }
 }
 
 function showUser(user) {
