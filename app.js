@@ -1,4 +1,4 @@
-async function loadUsers(amount = 20) {
+async function loadUsers(amount = 50) {
   const response = await fetch(`https://randomuser.me/api/?results=${amount}`);
   if (response.status === 200) {
     const data = await response.json();
